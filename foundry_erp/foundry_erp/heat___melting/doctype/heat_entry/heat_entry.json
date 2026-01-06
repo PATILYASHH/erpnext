@@ -1,0 +1,166 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-01-06 17:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "furnace",
+  "date_time",
+  "grade",
+  "material_type",
+  "column_break_1",
+  "planned_qty_kg",
+  "actual_melt_qty_kg",
+  "good_qty_kg",
+  "rejection_qty_kg",
+  "yield_percent",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "IF1-.YYYY.-.###\nIF2-.YYYY.-.###\nEAF1-.YYYY.-.###",
+   "reqd": 1
+  },
+  {
+   "fieldname": "furnace",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Furnace",
+   "options": "Furnace Master",
+   "reqd": 1
+  },
+  {
+   "default": "Now",
+   "fieldname": "date_time",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Date Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "grade",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Grade",
+   "options": "Grade Master",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "grade.material_type",
+   "fieldname": "material_type",
+   "fieldtype": "Link",
+   "label": "Material Type",
+   "options": "Material Type Master",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "planned_qty_kg",
+   "fieldtype": "Float",
+   "label": "Planned Qty (Kg)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "actual_melt_qty_kg",
+   "fieldtype": "Float",
+   "label": "Actual Melt Qty (Kg)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "good_qty_kg",
+   "fieldtype": "Float",
+   "label": "Good Qty (Kg)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "rejection_qty_kg",
+   "fieldtype": "Float",
+   "label": "Rejection Qty (Kg)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "yield_percent",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Yield %",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "default": "Open",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Open\nClosed"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-01-06 17:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Heat & Melting",
+ "name": "Heat Entry",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Furnace Operator",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Quality Engineer",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Management",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

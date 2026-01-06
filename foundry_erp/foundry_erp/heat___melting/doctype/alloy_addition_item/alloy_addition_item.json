@@ -1,0 +1,60 @@
+{
+ "actions": [],
+ "creation": "2026-01-06 17:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "alloy",
+  "qty_kg",
+  "recovery_percent",
+  "effective_qty"
+ ],
+ "fields": [
+  {
+   "fieldname": "alloy",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Alloy",
+   "options": "Alloy Master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "qty_kg",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Qty (Kg)",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "alloy.recovery_percent",
+   "fieldname": "recovery_percent",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Recovery %",
+   "precision": "2"
+  },
+  {
+   "fieldname": "effective_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Effective Qty (Kg)",
+   "precision": "2",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-01-06 17:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Heat & Melting",
+ "name": "Alloy Addition Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
