@@ -1,0 +1,37 @@
+[
+	{
+		"doctype": "Role",
+		"name": "Furnace Operator",
+		"role_name": "Furnace Operator",
+		"desk_access": 1,
+		"disabled": 0
+	},
+	{
+		"doctype": "Role",
+		"name": "Quality Engineer",
+		"role_name": "Quality Engineer",
+		"desk_access": 1,
+		"disabled": 0
+	},
+	{
+		"doctype": "Role",
+		"name": "Production Planner",
+		"role_name": "Production Planner",
+		"desk_access": 1,
+		"disabled": 0
+	},
+	{
+		"doctype": "Role",
+		"name": "Costing Engineer",
+		"role_name": "Costing Engineer",
+		"desk_access": 1,
+		"disabled": 0
+	},
+	{
+		"doctype": "Role",
+		"name": "Management",
+		"role_name": "Management",
+		"desk_access": 1,
+		"disabled": 0
+	}
+]

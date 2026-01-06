@@ -155,6 +155,13 @@ app_version = "0.0.1"
 #
 # auto_cancel_exempted_doctypes = ["Auto Repeat"]
 
+# Fixtures
+# --------
+# Export fixtures to be installed on a fresh site
+fixtures = [
+	{"dt": "Role", "filters": [["name", "in", ["Furnace Operator", "Quality Engineer", "Production Planner", "Costing Engineer", "Management"]]]}
+]
+
 
 # User Data Protection
 # --------------------
