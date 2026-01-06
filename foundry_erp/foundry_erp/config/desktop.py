@@ -9,6 +9,6 @@ def get_data():
 			"color": "#FF5733",
 			"icon": "fa fa-industry",
 			"type": "module",
-			"label": _("Foundry ERP")
+			"label": _("Foundry ERP"),
 		}
 	]

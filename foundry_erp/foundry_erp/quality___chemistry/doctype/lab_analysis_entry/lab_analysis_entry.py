@@ -17,9 +17,7 @@ class LabAnalysisEntry(Document):
 
 		# Get chemistry limits for the grade
 		chemistry_limits = frappe.get_all(
-			"Chemistry Limits Master",
-			filters={"grade": self.grade},
-			fields=["name"]
+			"Chemistry Limits Master", filters={"grade": self.grade}, fields=["name"]
 		)
 
 		if not chemistry_limits:
@@ -29,10 +27,7 @@ class LabAnalysisEntry(Document):
 		limits_doc = frappe.get_doc("Chemistry Limits Master", chemistry_limits[0].name)
 		limits_map = {}
 		for limit in limits_doc.element_limits:
-			limits_map[limit.element] = {
-				"min": limit.min_value,
-				"max": limit.max_value
-			}
+			limits_map[limit.element] = {"min": limit.min_value, "max": limit.max_value}
 
 		# Validate each result
 		any_out_of_range = False
@@ -40,11 +35,11 @@ class LabAnalysisEntry(Document):
 			if result.element in limits_map:
 				result.min_limit = limits_map[result.element]["min"]
 				result.max_limit = limits_map[result.element]["max"]
-				
+
 				# Check if within limits
 				min_val = result.min_limit or 0
-				max_val = result.max_limit or float('inf')
-				
+				max_val = result.max_limit or float("inf")
+
 				if min_val <= result.actual_value <= max_val:
 					result.within_limit = 1
 				else:

@@ -43,7 +43,7 @@ app_version = "0.0.1"
 
 # website user home page (by Role)
 # role_home_page = {
-#	"Role": "home_page"
+# "Role": "home_page"
 # }
 
 # Generators
@@ -108,7 +108,7 @@ app_version = "0.0.1"
 # 		"on_update": "method",
 # 		"on_cancel": "method",
 # 		"on_trash": "method"
-#	}
+# }
 # }
 
 # Scheduled Tasks
@@ -159,7 +159,22 @@ app_version = "0.0.1"
 # --------
 # Export fixtures to be installed on a fresh site
 fixtures = [
-	{"dt": "Role", "filters": [["name", "in", ["Furnace Operator", "Quality Engineer", "Production Planner", "Costing Engineer", "Management"]]]}
+	{
+		"dt": "Role",
+		"filters": [
+			[
+				"name",
+				"in",
+				[
+					"Furnace Operator",
+					"Quality Engineer",
+					"Production Planner",
+					"Costing Engineer",
+					"Management",
+				],
+			]
+		],
+	}
 ]
 
 
