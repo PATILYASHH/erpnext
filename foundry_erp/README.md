@@ -2,6 +2,10 @@
 
 Custom ERPNext v15 app for foundry business operations, designed for Frappe Cloud deployment.
 
+> 📚 **New!** See [DOCUMENTATION_INDEX.md](DOCUMENTATION_INDEX.md) for complete documentation navigation
+> 
+> 🖼️ **Visual Guide** - Check [SCREENSHOTS.md](SCREENSHOTS.md) for detailed visual documentation of all features
+
 ## Overview
 
 Foundry ERP is a comprehensive solution for managing foundry operations including:
@@ -119,6 +123,16 @@ foundry_erp/
 5. Perform lab analysis and validate chemistry
 6. Calculate heat costing
 7. Track patterns and rework as needed
+
+## Documentation
+
+For complete documentation, see:
+
+- **[DOCUMENTATION_INDEX.md](DOCUMENTATION_INDEX.md)** - Central navigation hub for all documentation
+- **[SCREENSHOTS.md](SCREENSHOTS.md)** - Comprehensive visual guide with detailed mockups and examples
+- **[FEATURES_VISUAL_GUIDE.md](FEATURES_VISUAL_GUIDE.md)** - Quick reference for all features and UI components
+- **[INSTALLATION.md](INSTALLATION.md)** - Installation and setup guide
+- **[SUMMARY.md](SUMMARY.md)** - Complete implementation summary
 
 ## License
 
