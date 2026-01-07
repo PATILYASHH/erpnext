@@ -341,8 +341,8 @@ Status
 ```
 ❌ Validation Error
 ─────────────────────────────────────────
-Actual Melt Qty (5500 kg) exceeds 
-furnace capacity (5000 kg) for IF1
+Actual Melt Qty (5500 Kg) exceeds 
+furnace capacity (5000 Kg) for IF1
 
 [OK]
 ```
