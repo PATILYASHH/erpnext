@@ -14,15 +14,21 @@ class HeatEntry(Document):
 	def validate_furnace_capacity(self):
 		"""Validate that actual melt qty does not exceed furnace capacity"""
 		if self.actual_melt_qty_kg and self.furnace:
-			furnace = frappe.get_doc("Furnace Master", self.furnace)
-			if furnace.capacity_kg and self.actual_melt_qty_kg > furnace.capacity_kg:
-				frappe.throw(
-					f"Actual Melt Qty ({self.actual_melt_qty_kg} kg) exceeds furnace capacity ({furnace.capacity_kg} kg)"
-				)
+			try:
+				furnace = frappe.get_doc("Furnace Master", self.furnace)
+				if furnace.capacity_kg and self.actual_melt_qty_kg > furnace.capacity_kg:
+					frappe.throw(
+						f"Actual Melt Qty ({self.actual_melt_qty_kg} kg) exceeds furnace capacity ({furnace.capacity_kg} kg)"
+					)
+			except frappe.DoesNotExistError:
+				frappe.throw(f"Furnace {self.furnace} not found in system")
+			except Exception as e:
+				frappe.log_error(f"Unexpected error in furnace capacity validation: {str(e)}")
+				frappe.throw(f"Error validating furnace capacity: {str(e)}")
 
 	def calculate_yield(self):
 		"""Auto calculate yield percentage"""
-		if self.actual_melt_qty_kg and self.good_qty_kg:
-			self.yield_percent = (self.good_qty_kg / self.actual_melt_qty_kg) * 100
+		if self.actual_melt_qty_kg and self.actual_melt_qty_kg > 0 and self.good_qty_kg:
+			self.yield_percent = round((self.good_qty_kg / self.actual_melt_qty_kg) * 100, 2)
 		else:
 			self.yield_percent = 0
