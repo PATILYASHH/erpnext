@@ -174,6 +174,18 @@ fixtures = [
 				],
 			]
 		],
+	},
+	{
+		"dt": "Workspace",
+		"filters": [
+			[
+				"name",
+				"in",
+				[
+					"Foundry ERP",
+				],
+			]
+		],
 	}
 ]
 

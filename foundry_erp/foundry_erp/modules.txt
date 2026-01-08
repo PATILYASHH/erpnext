@@ -1,7 +1,7 @@
 Masters
 Pattern Management
 Production Planning
-Heat & Melting
-Quality & Chemistry
+Heat and Melting
+Quality and Chemistry
 Costing
-Reports & Dashboard
+Reports and Dashboard

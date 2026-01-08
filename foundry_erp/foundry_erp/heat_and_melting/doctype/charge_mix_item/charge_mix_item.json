@@ -5,18 +5,17 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "alloy",
+  "scrap",
   "qty_kg",
-  "recovery_percent",
-  "effective_qty"
+  "cost"
  ],
  "fields": [
   {
-   "fieldname": "alloy",
+   "fieldname": "scrap",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Alloy",
-   "options": "Alloy Master",
+   "label": "Scrap",
+   "options": "Scrap Master",
    "reqd": 1
   },
   {
@@ -28,20 +27,10 @@
    "reqd": 1
   },
   {
-   "fetch_from": "alloy.recovery_percent",
-   "fieldname": "recovery_percent",
-   "fieldtype": "Float",
+   "fieldname": "cost",
+   "fieldtype": "Currency",
    "in_list_view": 1,
-   "label": "Recovery %",
-   "precision": "2"
-  },
-  {
-   "fieldname": "effective_qty",
-   "fieldtype": "Float",
-   "in_list_view": 1,
-   "label": "Effective Qty (Kg)",
-   "precision": "2",
-   "read_only": 1
+   "label": "Cost"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -49,8 +38,8 @@
  "links": [],
  "modified": "2026-01-06 17:00:00.000000",
  "modified_by": "Administrator",
- "module": "Heat & Melting",
- "name": "Alloy Addition Item",
+ "module": "Heat and Melting",
+ "name": "Charge Mix Item",
  "owner": "Administrator",
  "permissions": [],
  "sort_field": "modified",

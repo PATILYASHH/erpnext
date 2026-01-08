@@ -1,0 +1,346 @@
+{
+    "app": "foundry_erp",
+    "charts": [],
+    "content": "[{\"id\":\"header_shortcuts\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Quick Access</b></span>\",\"col\":12}},{\"id\":\"shortcut_heat_entry\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Heat Entry\",\"col\":3}},{\"id\":\"shortcut_lab_analysis\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Lab Analysis Entry\",\"col\":3}},{\"id\":\"shortcut_furnace_master\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Furnace Master\",\"col\":3}},{\"id\":\"shortcut_daily_plan\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Daily Production Plan\",\"col\":3}},{\"id\":\"shortcut_pattern_issue\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Pattern Issue\",\"col\":3}},{\"id\":\"shortcut_charge_mix\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Charge Mix\",\"col\":3}},{\"id\":\"shortcut_alloy_addition\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Alloy Addition\",\"col\":3}},{\"id\":\"shortcut_heat_costing\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Heat Costing\",\"col\":3}},{\"id\":\"spacer_1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"header_modules\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Modules & Masters</b></span>\",\"col\":12}},{\"id\":\"card_masters\",\"type\":\"card\",\"data\":{\"card_name\":\"Masters\",\"col\":4}},{\"id\":\"card_heat_melting\",\"type\":\"card\",\"data\":{\"card_name\":\"Heat and Melting\",\"col\":4}},{\"id\":\"card_quality\",\"type\":\"card\",\"data\":{\"card_name\":\"Quality and Chemistry\",\"col\":4}},{\"id\":\"card_planning\",\"type\":\"card\",\"data\":{\"card_name\":\"Production Planning\",\"col\":4}},{\"id\":\"card_pattern\",\"type\":\"card\",\"data\":{\"card_name\":\"Pattern Management\",\"col\":4}},{\"id\":\"card_costing\",\"type\":\"card\",\"data\":{\"card_name\":\"Costing\",\"col\":4}}]",
+    "creation": "2026-01-08 09:14:00.000000",
+    "custom_blocks": [],
+    "docstatus": 0,
+    "doctype": "Workspace",
+    "for_user": "",
+    "hide_custom": 0,
+    "icon": "industry",
+    "idx": 0,
+    "is_hidden": 0,
+    "label": "Foundry ERP",
+    "links": [
+        {
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Masters",
+            "link_count": 8,
+            "onboard": 0,
+            "type": "Card Break"
+        },
+        {
+            "dependencies": "",
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Furnace Master",
+            "link_count": 0,
+            "link_to": "Furnace Master",
+            "link_type": "DocType",
+            "onboard": 1,
+            "type": "Link"
+        },
+        {
+            "dependencies": "",
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Material Type Master",
+            "link_count": 0,
+            "link_to": "Material Type Master",
+            "link_type": "DocType",
+            "onboard": 1,
+            "type": "Link"
+        },
+        {
+            "dependencies": "Material Type Master",
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Grade Master",
+            "link_count": 0,
+            "link_to": "Grade Master",
+            "link_type": "DocType",
+            "onboard": 1,
+            "type": "Link"
+        },
+        {
+            "dependencies": "Grade Master",
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Chemistry Limits Master",
+            "link_count": 0,
+            "link_to": "Chemistry Limits Master",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "dependencies": "",
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Alloy Master",
+            "link_count": 0,
+            "link_to": "Alloy Master",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "dependencies": "",
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Scrap Master",
+            "link_count": 0,
+            "link_to": "Scrap Master",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "dependencies": "Grade Master",
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Casting Master",
+            "link_count": 0,
+            "link_to": "Casting Master",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "dependencies": "Casting Master",
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Pattern Master",
+            "link_count": 0,
+            "link_to": "Pattern Master",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Heat and Melting",
+            "link_count": 3,
+            "onboard": 0,
+            "type": "Card Break"
+        },
+        {
+            "dependencies": "Furnace Master, Grade Master",
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Heat Entry",
+            "link_count": 0,
+            "link_to": "Heat Entry",
+            "link_type": "DocType",
+            "onboard": 1,
+            "type": "Link"
+        },
+        {
+            "dependencies": "Heat Entry",
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Charge Mix",
+            "link_count": 0,
+            "link_to": "Charge Mix",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "dependencies": "Heat Entry",
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Alloy Addition",
+            "link_count": 0,
+            "link_to": "Alloy Addition",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Quality and Chemistry",
+            "link_count": 2,
+            "onboard": 0,
+            "type": "Card Break"
+        },
+        {
+            "dependencies": "Heat Entry",
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Lab Analysis Entry",
+            "link_count": 0,
+            "link_to": "Lab Analysis Entry",
+            "link_type": "DocType",
+            "onboard": 1,
+            "type": "Link"
+        },
+        {
+            "dependencies": "Heat Entry",
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Rework Entry",
+            "link_count": 0,
+            "link_to": "Rework Entry",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Production Planning",
+            "link_count": 2,
+            "onboard": 0,
+            "type": "Card Break"
+        },
+        {
+            "dependencies": "",
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Monthly Production Plan",
+            "link_count": 0,
+            "link_to": "Monthly Production Plan",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "dependencies": "",
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Daily Production Plan",
+            "link_count": 0,
+            "link_to": "Daily Production Plan",
+            "link_type": "DocType",
+            "onboard": 1,
+            "type": "Link"
+        },
+        {
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Pattern Management",
+            "link_count": 2,
+            "onboard": 0,
+            "type": "Card Break"
+        },
+        {
+            "dependencies": "Pattern Master",
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Pattern Issue",
+            "link_count": 0,
+            "link_to": "Pattern Issue",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "dependencies": "Pattern Master",
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Pattern Return",
+            "link_count": 0,
+            "link_to": "Pattern Return",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Costing",
+            "link_count": 2,
+            "onboard": 0,
+            "type": "Card Break"
+        },
+        {
+            "dependencies": "Furnace Master",
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Furnace Power Cost",
+            "link_count": 0,
+            "link_to": "Furnace Power Cost",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "dependencies": "Heat Entry",
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Heat Costing",
+            "link_count": 0,
+            "link_to": "Heat Costing",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        }
+    ],
+    "modified": "2026-01-08 09:14:00.000000",
+    "modified_by": "Administrator",
+    "module": "Foundry ERP",
+    "name": "Foundry ERP",
+    "number_cards": [],
+    "owner": "Administrator",
+    "parent_page": "",
+    "public": 1,
+    "quick_lists": [],
+    "restrict_to_domain": "",
+    "roles": [],
+    "sequence_id": 15.0,
+    "shortcuts": [
+        {
+            "color": "Orange",
+            "doc_view": "New",
+            "label": "Heat Entry",
+            "link_to": "Heat Entry",
+            "type": "DocType"
+        },
+        {
+            "color": "Blue",
+            "doc_view": "New",
+            "label": "Lab Analysis Entry",
+            "link_to": "Lab Analysis Entry",
+            "type": "DocType"
+        },
+        {
+            "color": "Grey",
+            "doc_view": "List",
+            "label": "Furnace Master",
+            "link_to": "Furnace Master",
+            "type": "DocType"
+        },
+        {
+            "color": "Green",
+            "doc_view": "New",
+            "label": "Daily Production Plan",
+            "link_to": "Daily Production Plan",
+            "type": "DocType"
+        },
+        {
+            "color": "Grey",
+            "doc_view": "New",
+            "label": "Pattern Issue",
+            "link_to": "Pattern Issue",
+            "type": "DocType"
+        },
+        {
+            "color": "Grey",
+            "doc_view": "List",
+            "label": "Charge Mix",
+            "link_to": "Charge Mix",
+            "type": "DocType"
+        },
+        {
+            "color": "Grey",
+            "doc_view": "List",
+            "label": "Alloy Addition",
+            "link_to": "Alloy Addition",
+            "type": "DocType"
+        },
+        {
+            "color": "Purple",
+            "doc_view": "List",
+            "label": "Heat Costing",
+            "link_to": "Heat Costing",
+            "type": "DocType"
+        }
+    ],
+    "title": "Foundry ERP",
+    "type": "Workspace"
+}

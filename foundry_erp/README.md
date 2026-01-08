@@ -15,8 +15,22 @@ Foundry ERP is a comprehensive solution for managing foundry operations includin
 - Quality control and chemistry analysis
 - Pattern lifecycle management
 - Production planning and costing
+- **Easy-access workspace** with quick shortcuts to key features
 
 ## Features
+
+### 0. Workspace & Quick Access
+- **Foundry ERP Workspace**: Dedicated desk page with organized access to all features
+- **8 Quick Shortcuts**: One-click access to most-used features:
+  - Heat Entry (New)
+  - Lab Analysis Entry (New)
+  - Furnace Master (List)
+  - Daily Production Plan (New)
+  - Pattern Issue (New)
+  - Charge Mix (List)
+  - Alloy Addition (List)
+  - Heat Costing (List)
+- **6 Organized Cards**: Features grouped by module for easy navigation
 
 ### 1. Masters Module
 - **Furnace Master**: Define furnaces with capacity and power ratings

@@ -5,48 +5,42 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "element",
-  "actual_value",
-  "min_limit",
-  "max_limit",
-  "within_limit"
+  "alloy",
+  "qty_kg",
+  "recovery_percent",
+  "effective_qty"
  ],
  "fields": [
   {
-   "fieldname": "element",
-   "fieldtype": "Data",
+   "fieldname": "alloy",
+   "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Element",
+   "label": "Alloy",
+   "options": "Alloy Master",
    "reqd": 1
   },
   {
-   "fieldname": "actual_value",
+   "fieldname": "qty_kg",
    "fieldtype": "Float",
    "in_list_view": 1,
-   "label": "Actual Value (%)",
-   "precision": "4",
+   "label": "Qty (Kg)",
+   "precision": "2",
    "reqd": 1
   },
   {
-   "fieldname": "min_limit",
+   "fetch_from": "alloy.recovery_percent",
+   "fieldname": "recovery_percent",
    "fieldtype": "Float",
    "in_list_view": 1,
-   "label": "Min Limit (%)",
-   "precision": "4"
+   "label": "Recovery %",
+   "precision": "2"
   },
   {
-   "fieldname": "max_limit",
+   "fieldname": "effective_qty",
    "fieldtype": "Float",
    "in_list_view": 1,
-   "label": "Max Limit (%)",
-   "precision": "4"
-  },
-  {
-   "default": "0",
-   "fieldname": "within_limit",
-   "fieldtype": "Check",
-   "in_list_view": 1,
-   "label": "Within Limit",
+   "label": "Effective Qty (Kg)",
+   "precision": "2",
    "read_only": 1
   }
  ],
@@ -55,8 +49,8 @@
  "links": [],
  "modified": "2026-01-06 17:00:00.000000",
  "modified_by": "Administrator",
- "module": "Quality & Chemistry",
- "name": "Chemistry Result",
+ "module": "Heat and Melting",
+ "name": "Alloy Addition Item",
  "owner": "Administrator",
  "permissions": [],
  "sort_field": "modified",

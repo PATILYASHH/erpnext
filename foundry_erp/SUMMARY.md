@@ -82,7 +82,37 @@ Complete custom ERPNext v15 app for foundry business operations, designed for Fr
 - Real-time field updates for operator convenience
 ```
 
-### 5. Roles & Permissions ✓
+### 5. Workspace Configuration ✓
+
+#### Foundry ERP Workspace
+- **Location**: `foundry_erp/workspace/foundry_erp/foundry_erp.json`
+- **Purpose**: Dedicated desk page for easy access to all Foundry ERP features
+- **Icon**: Industry (factory icon)
+- **Color**: Orange (#FF5733)
+
+#### Quick Access Shortcuts (8)
+1. **Heat Entry** (Orange, New) - Primary production action
+2. **Lab Analysis Entry** (Blue, New) - Quality control
+3. **Furnace Master** (Grey, List) - Equipment setup
+4. **Daily Production Plan** (Green, New) - Daily operations
+5. **Pattern Issue** (Grey, New) - Pattern operations
+6. **Charge Mix** (Grey, List) - Material tracking
+7. **Alloy Addition** (Grey, List) - Alloy tracking
+8. **Heat Costing** (Purple, List) - Cost analysis
+
+#### Organized Cards (6)
+- **Masters Card**: All 8 master DocTypes
+- **Heat & Melting Card**: Heat Entry, Charge Mix, Alloy Addition
+- **Quality & Chemistry Card**: Lab Analysis, Rework Entry
+- **Production Planning Card**: Monthly/Daily Production Plans
+- **Pattern Management Card**: Pattern Issue/Return
+- **Costing Card**: Furnace Power Cost, Heat Costing
+
+#### Workspace Export
+- Configured in `hooks.py` fixtures for automatic installation
+- Public workspace (visible to all users with appropriate permissions)
+
+### 6. Roles & Permissions ✓
 
 #### Custom Roles Defined (5)
 1. **Furnace Operator**: Heat entry, pattern management, daily operations
@@ -98,7 +128,7 @@ Each DocType has granular permissions assigned with appropriate:
 - Export, Print, Email capabilities
 - Share permissions
 
-### 6. Key Features ✓
+### 7. Key Features ✓
 
 #### Furnace-Wise Heat Numbering
 - IF1 furnace: IF1-2025-001, IF1-2025-002...
@@ -119,23 +149,24 @@ Each DocType has granular permissions assigned with appropriate:
 - Lab Analysis → Heat Entry, Grade (links)
 - Chemistry Limits → Grade (link)
 
-### 7. Documentation ✓
+### 8. Documentation ✓
 - README.md: Comprehensive overview and features
 - INSTALLATION.md: Detailed installation and setup guide
 - Inline code comments
 - Fixtures for role installation
 
-### 8. Configuration Files ✓
+### 9. Configuration Files ✓
 - pyproject.toml: App metadata and dependencies
 - hooks.py: Frappe hooks configuration with fixtures
 - modules.txt: Module definitions
 - desktop.py: Desktop icon configuration
 - .gitignore: Standard Python/Node gitignore
 
-### 9. File Count Summary
+### 10. File Count Summary
 - DocType JSON files: 26
 - DocType Python files: 26
 - DocType JavaScript files: 1 (Heat Entry)
+- Workspace JSON files: 1 (Foundry ERP)
 - Module __init__.py files: 7
 - Total Python files: 69+
 - Configuration files: 5

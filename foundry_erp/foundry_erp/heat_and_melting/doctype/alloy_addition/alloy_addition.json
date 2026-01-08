@@ -1,54 +1,53 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "naming_series:",
+ "autoname": "field:heat",
  "creation": "2026-01-06 17:00:00.000000",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "naming_series",
   "heat",
-  "rework_qty_kg",
-  "reason"
+  "total_alloy_kg",
+  "items_section",
+  "items"
  ],
  "fields": [
-  {
-   "fieldname": "naming_series",
-   "fieldtype": "Select",
-   "label": "Series",
-   "options": "RW-.YYYY.-.####",
-   "reqd": 1
-  },
   {
    "fieldname": "heat",
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Heat",
    "options": "Heat Entry",
-   "reqd": 1
+   "reqd": 1,
+   "unique": 1
   },
   {
-   "fieldname": "rework_qty_kg",
+   "fieldname": "total_alloy_kg",
    "fieldtype": "Float",
-   "in_list_view": 1,
-   "label": "Rework Qty (Kg)",
+   "label": "Total Alloy (Kg)",
    "precision": "2",
-   "reqd": 1
+   "read_only": 1
   },
   {
-   "fieldname": "reason",
-   "fieldtype": "Small Text",
-   "label": "Reason"
+   "fieldname": "items_section",
+   "fieldtype": "Section Break",
+   "label": "Alloy Items"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Alloy Addition Item"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
  "modified": "2026-01-06 17:00:00.000000",
  "modified_by": "Administrator",
- "module": "Quality & Chemistry",
- "name": "Rework Entry",
- "naming_rule": "By \"Naming Series\" field",
+ "module": "Heat and Melting",
+ "name": "Alloy Addition",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
@@ -71,20 +70,18 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Quality Engineer",
+   "role": "Furnace Operator",
    "share": 1,
    "write": 1
   },
   {
-   "create": 1,
    "email": 1,
    "export": 1,
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Furnace Operator",
-   "share": 1,
-   "write": 1
+   "role": "Costing Engineer",
+   "share": 1
   }
  ],
  "sort_field": "modified",
