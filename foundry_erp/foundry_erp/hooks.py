@@ -1,10 +1,10 @@
 app_name = "foundry_erp"
 app_title = "Foundry ERP"
-app_publisher = "Custom"
+app_publisher = "Foundry ERP Solutions"
 app_description = "Custom ERPNext app for foundry business operations"
 app_icon = "fa fa-industry"
 app_color = "#FF5733"
-app_email = "info@example.com"
+app_email = "support@foundryerp.com"
 app_license = "MIT"
 app_version = "0.0.1"
 

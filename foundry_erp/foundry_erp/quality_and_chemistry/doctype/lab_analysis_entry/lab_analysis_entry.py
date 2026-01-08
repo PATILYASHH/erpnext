@@ -46,6 +46,13 @@ class LabAnalysisEntry(Document):
 					result.within_limit = 0
 					any_out_of_range = True
 
-		# Throw error if any element is out of range
+		# Set status based on validation results
 		if any_out_of_range:
-			frappe.throw("One or more chemistry elements are out of specified limits")
+			self.status = "Out of Specification"
+			frappe.msgprint(
+				"Warning: One or more chemistry elements are out of specified limits",
+				indicator="orange",
+				alert=True
+			)
+		else:
+			self.status = "Within Specification"
