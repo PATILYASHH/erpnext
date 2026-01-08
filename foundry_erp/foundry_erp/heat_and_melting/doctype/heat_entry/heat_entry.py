@@ -23,6 +23,7 @@ class HeatEntry(Document):
 			except frappe.DoesNotExistError:
 				frappe.throw(f"Furnace {self.furnace} not found in system")
 			except Exception as e:
+				frappe.log_error(f"Unexpected error in furnace capacity validation: {str(e)}")
 				frappe.throw(f"Error validating furnace capacity: {str(e)}")
 
 	def calculate_yield(self):
