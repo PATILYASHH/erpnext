@@ -1,0 +1,10 @@
+include README.md
+include license.txt
+include pyproject.toml
+recursive-include foundry_erp *.py
+recursive-include foundry_erp *.json
+recursive-include foundry_erp *.js
+recursive-include foundry_erp *.css
+recursive-include foundry_erp *.html
+recursive-include foundry_erp *.txt
+recursive-include foundry_erp *.md
