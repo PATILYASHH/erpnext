@@ -269,10 +269,11 @@
    "url": ""
   }
  ],
- "modified": "2025-12-31 16:27:44.936562",
+ "modified": "2026-01-08 18:49:12.152039",
  "modified_by": "Administrator",
  "module": "Assets",
  "name": "Assets",
  "owner": "Administrator",
+ "standard": 1,
  "title": "Assets"
 }
