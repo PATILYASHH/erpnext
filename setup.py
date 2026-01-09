@@ -23,6 +23,7 @@ setup(
     ],
     python_requires=">=3.10",
     install_requires=[
-        "frappe",
+        # Dependencies are managed in pyproject.toml [tool.bench.frappe-dependencies]
+        # ERPNext is listed in hooks.py required_apps and installed via bench
     ],
 )
