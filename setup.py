@@ -1,9 +1,15 @@
 """Setup script for Foundry ERP"""
 
 from setuptools import setup, find_packages
+import os
 
-with open("README.md", encoding="utf-8") as f:
-	long_description = f.read()
+# Read README for long description
+readme_path = os.path.join(os.path.dirname(__file__), "README.md")
+try:
+	with open(readme_path, encoding="utf-8") as f:
+		long_description = f.read()
+except FileNotFoundError:
+	long_description = "Custom ERP extensions built on top of ERPNext"
 
 setup(
 	name="foundry_erp",
