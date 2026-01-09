@@ -24,5 +24,7 @@ setup(
     python_requires=">=3.10",
     install_requires=[
         "frappe",
+        # Note: erpnext is listed in hooks.py required_apps and will be
+        # installed separately via bench as it's a Frappe app
     ],
 )
